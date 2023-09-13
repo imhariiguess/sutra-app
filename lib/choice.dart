@@ -23,28 +23,75 @@ class Choice extends StatelessWidget {
                                           ),
                                     ),
                                     const SizedBox(height: 50.0),
-                                    ElevatedButton(
-                                          style: ElevatedButton.styleFrom(
-                                                backgroundColor: Colors.deepOrange,
-                                                fixedSize: const Size(100, 50),
+                                    SizedBox(
+                                          width: 150, // Adjust the width as needed
+                                          height: 75,
+                                          child: ElevatedButton(
+                                                style: ElevatedButton.styleFrom(
+                                                      backgroundColor: Colors.deepOrange,
+                                                ),
+                                                onPressed: () {
+                                                      // Handle educator choice
+                                                },
+                                                child: Row(
+                                                      mainAxisAlignment: MainAxisAlignment.center,
+                                                      children: <Widget>[
+                                                            Image.asset(
+                                                                  'assets/student-with-graduation-cap.png', // Replace with the correct path to your image
+                                                                  width: 24,
+                                                                  height: 24,
+                                                            ),
+                                                            const SizedBox(width: 8),
+                                                            const Text(
+                                                                  'Learner',
+                                                                  textAlign: TextAlign.center,
+                                                                  style: TextStyle(
+                                                                        fontSize: 20, // Adjust the font size as needed
+                                                                        fontWeight: FontWeight.bold, // Adjust the font weight as needed
+                                                                        color: Colors.white, // Adjust the text color as needed
+                                                                  ),
+                                                            ),
+                                                      ],
+                                                ),
                                           ),
-                                          onPressed: () {
-                                                // Handle learner choice
-                                          },
-                                          child: const Text('Learner'),
                                     ),
 
+
+
                                     const SizedBox(height: 20.0),
-                                    ElevatedButton(
-                                          style: ElevatedButton.styleFrom(
-                                                backgroundColor: Colors.deepOrange,
-                                                fixedSize: const Size(100, 50),
+                                    SizedBox(
+                                          width: 150, // Adjust the width as needed
+                                          height: 75,
+                                          child: ElevatedButton(
+                                                style: ElevatedButton.styleFrom(
+                                                      backgroundColor: Colors.deepOrange,
+                                                ),
+                                                onPressed: () {
+                                                      // Handle educator choice
+                                                },
+                                                child: Row(
+                                                      mainAxisAlignment: MainAxisAlignment.center,
+                                                      children: <Widget>[
+                                                            Image.asset(
+                                                                  'assets/person.png', // Replace with the correct path to your image
+                                                                  width: 24,
+                                                                  height: 24,
+                                                            ),
+                                                            const SizedBox(width: 8),
+                                                            const Text(
+                                                                  'Educator',
+                                                                  textAlign: TextAlign.center,
+                                                                  style: TextStyle(
+                                                                        fontSize: 20, // Adjust the font size as needed
+                                                                        fontWeight: FontWeight.bold, // Adjust the font weight as needed
+                                                                        color: Colors.white, // Adjust the text color as needed
+                                                                  ),
+                                                            ),
+                                                      ],
+                                                ),
                                           ),
-                                          onPressed: () {
-                                            //Insert student reg page here
-                                          },
-                                          child: const Text('Educator'),
                                     ),
+
 
                               ],
                         ),

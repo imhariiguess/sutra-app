@@ -40,13 +40,13 @@ class NewWidget extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Image.asset(
-                'assets/sutra_logo.png',
-                height: 48,
-                width: 48,
+              const Image(
+                image: AssetImage('assets/sutra_logo.png'),
+                height: 148,
+                width: 148,
               ),
               const SizedBox(
-                height: 40.0,
+                height: 70.0,
               ),
               const Text(
                 'Log in to your account',
