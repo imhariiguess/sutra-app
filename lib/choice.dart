@@ -21,6 +21,9 @@ class Choice extends StatelessWidget {
                                           ),
                                     ),
                                     ElevatedButton.icon(
+                                          style: ElevatedButton.styleFrom(
+                                                backgroundColor: Colors.deepOrange
+                                          ),
                                           onPressed: () {
                                                 // Handle the learner option
                                                 Navigator.pushNamed(context, '/learner');
@@ -34,6 +37,9 @@ class Choice extends StatelessWidget {
                                     ),
                                     const SizedBox(height: 20.0),
                                     ElevatedButton.icon(
+                                          style: ElevatedButton.styleFrom(
+                                                backgroundColor: Colors.deepOrange,
+                                          ),
                                           onPressed: () {
                                                 // Handle the educator option
                                                 Navigator.pushNamed(context, '/educator');

@@ -34,9 +34,6 @@ class NewWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.deepOrange,
-      ),
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(20.0),
