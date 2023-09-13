@@ -23,7 +23,7 @@ class Choice extends StatelessWidget {
                                           ),
                                     ),
                                     const SizedBox(height: 50.0),
-                                    ElevatedButton.icon(
+                                    ElevatedButton(
                                           style: ElevatedButton.styleFrom(
                                                 backgroundColor: Colors.deepOrange
                                           ),
@@ -31,15 +31,9 @@ class Choice extends StatelessWidget {
                                                 // Handle the learner option
                                                 Navigator.pushNamed(context, '/learner');
                                           },
-                                          icon: Image.asset(
-                                              'assets/person.png',
-                                                width: 48,
-                                                height: 48,
-                                          ),
-                                          label: const Text('I am a Learner'),
                                     ),
                                     const SizedBox(height: 20.0),
-                                    ElevatedButton.icon(
+                                    ElevatedButton(
                                           style: ElevatedButton.styleFrom(
                                                 backgroundColor: Colors.deepOrange,
                                           ),
@@ -47,12 +41,6 @@ class Choice extends StatelessWidget {
                                                 // Handle the educator option
                                                 Navigator.pushNamed(context, '/educator');
                                           },
-                                          icon: Image.asset(
-                                                'assets/person.png',
-                                                width: 48,
-                                                height: 48,
-                                          ),
-                                          label: const Text('I am an Educator'),
                                     ),
                               ],
                         ),
