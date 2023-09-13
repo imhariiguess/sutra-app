@@ -40,8 +40,16 @@ class NewWidget extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
+              Image.asset(
+                'assets/sutra_logo.png',
+                height: 48,
+                width: 48,
+              ),
+              const SizedBox(
+                height: 40.0,
+              ),
               const Text(
-                'Sutra logo goes here',
+                'Log in to your account',
                 style: TextStyle(
                   fontSize: 24.0,
                   fontWeight: FontWeight.bold,

@@ -6,9 +6,11 @@ class Choice extends StatelessWidget {
       @override
       Widget build(BuildContext context) {
             return Scaffold(
-                  appBar: AppBar(
-                        backgroundColor: Colors.deepOrange,
-                  ),
+                  appBar:
+                      AppBar(
+                            backgroundColor: Colors.transparent,
+                            elevation: 0.0,
+                      ),
                   body: Center(
                         child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
@@ -20,6 +22,7 @@ class Choice extends StatelessWidget {
                                                 fontWeight: FontWeight.bold,
                                           ),
                                     ),
+                                    const SizedBox(height: 50.0),
                                     ElevatedButton.icon(
                                           style: ElevatedButton.styleFrom(
                                                 backgroundColor: Colors.deepOrange
