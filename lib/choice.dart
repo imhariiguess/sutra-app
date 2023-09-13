@@ -8,7 +8,7 @@ class Choice extends StatelessWidget {
             return Scaffold(
                   appBar:
                       AppBar(
-                            backgroundColor: Colors.transparent,
+                            backgroundColor: Colors.white,
                             elevation: 0.0,
                       ),
                   body: Center(
@@ -25,23 +25,27 @@ class Choice extends StatelessWidget {
                                     const SizedBox(height: 50.0),
                                     ElevatedButton(
                                           style: ElevatedButton.styleFrom(
-                                                backgroundColor: Colors.deepOrange
+                                                backgroundColor: Colors.deepOrange,
+                                                fixedSize: const Size(100, 50),
                                           ),
                                           onPressed: () {
-                                                // Handle the learner option
-                                                Navigator.pushNamed(context, '/learner');
+                                                // Handle learner choice
                                           },
+                                          child: const Text('Learner'),
                                     ),
+
                                     const SizedBox(height: 20.0),
                                     ElevatedButton(
                                           style: ElevatedButton.styleFrom(
                                                 backgroundColor: Colors.deepOrange,
+                                                fixedSize: const Size(100, 50),
                                           ),
                                           onPressed: () {
-                                                // Handle the educator option
-                                                Navigator.pushNamed(context, '/educator');
+                                            //Insert student reg page here
                                           },
+                                          child: const Text('Educator'),
                                     ),
+
                               ],
                         ),
                   ),
