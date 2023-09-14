@@ -1,6 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:sutra/register.dart';
+import 'package:sutra/alt_login.dart';
 
 void main() {
   runApp(const LoginApp());
@@ -34,81 +35,99 @@ class NewWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Padding(
-          padding: const EdgeInsets.all(20.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              const Image(
-                image: AssetImage('assets/sutra_logo.png'),
-                height: 148,
-                width: 148,
+      backgroundColor: Colors.deepOrange[100],
+      body: Stack(
+        children: <Widget>[
+          Center(
+            child: Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  const Image(
+                    image: AssetImage('assets/sutra_logo.png'),
+                    height: 148,
+                    width: 148,
+                  ),
+                  const SizedBox(
+                    height: 70.0,
+                  ),
+                  const Text(
+                    'Log in to your account',
+                    style: TextStyle(
+                      fontSize: 24.0,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  const SizedBox(height: 20.0),
+                  const TextField(
+                    decoration: InputDecoration(
+                      labelText: 'Username',
+                    ),
+                  ),
+                  const SizedBox(height: 20.0),
+                  const TextField(
+                    obscureText: true,
+                    decoration: InputDecoration(
+                      labelText: 'Password',
+                    ),
+                  ),
+                  const SizedBox(height: 20.0),
+                  ElevatedButton(
+                    onPressed: () {
+                      // Add your login logic here
+                    },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.deepOrange,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(50), // Adjust the radius as needed
+                      ),
+                    ),
+                    child: const Text(
+                      'Login',
+                      style: TextStyle(
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
+                ],
               ),
-              const SizedBox(
-                height: 70.0,
-              ),
-              const Text(
-                'Log in to your account',
-                style: TextStyle(
-                  fontSize: 24.0,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              const SizedBox(height: 20.0),
-              const TextField(
-                decoration: InputDecoration(
-                  labelText: 'Username',
-                ),
-              ),
-              const SizedBox(height: 20.0),
-              const TextField(
-                obscureText: true,
-                decoration: InputDecoration(
-                  labelText: 'Password',
-                ),
-              ),
-              const SizedBox(height: 20.0),
-              ElevatedButton(
-                onPressed: () {
-                  // Add your login logic here
-                },
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.deepOrange,
-                ),
-                child: const Text('Login'),
-              ),
-              const SizedBox(height: 20.0),
-              RichText(
-                text: TextSpan(
+            ),
+          ),
+          Positioned(
+            bottom: 16.0, // Adjust as needed
+            left: 0, // Align to the left
+            right: 0, // Align to the right
+            child: GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const RegistrationPage()),
+                );
+              },
+              child: RichText(
+                textAlign: TextAlign.center,
+                text: const TextSpan(
                   text: 'New to Sutra? ',
-                  style: const TextStyle(
-                    fontWeight: FontWeight.bold,
-                    color: Colors.deepOrange,
+                  style: TextStyle(
                     fontSize: 16.0,
+                    color: Colors.black, // Text color
                   ),
                   children: <TextSpan>[
                     TextSpan(
-                      text: 'Click here',
-                      style: const TextStyle(
-                        color: Colors.blue,
+                      text: 'Join now',
+                      style: TextStyle(
                         decoration: TextDecoration.underline,
+                        fontWeight: FontWeight.bold,
                       ),
-                      recognizer: TapGestureRecognizer()
-                        ..onTap = () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => const RegistrationPage()),
-                          );
-
-                        },
                     ),
                   ],
                 ),
               ),
-            ],
+            ),
           ),
-        ),
+
+        ],
       ),
     );
   }

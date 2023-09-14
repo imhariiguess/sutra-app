@@ -6,9 +6,10 @@ class Choice extends StatelessWidget {
       @override
       Widget build(BuildContext context) {
             return Scaffold(
+                  backgroundColor: Colors.deepOrange[100],
                   appBar:
                       AppBar(
-                            backgroundColor: Colors.white,
+                            backgroundColor: Colors.transparent,
                             elevation: 0.0,
                       ),
                   body: Center(
@@ -29,6 +30,9 @@ class Choice extends StatelessWidget {
                                           child: ElevatedButton(
                                                 style: ElevatedButton.styleFrom(
                                                       backgroundColor: Colors.deepOrange,
+                                                      shape: RoundedRectangleBorder(
+                                                            borderRadius: BorderRadius.circular(75), // Adjust the radius as needed
+                                                      ),
                                                 ),
                                                 onPressed: () {
                                                       // Handle educator choice
@@ -65,6 +69,9 @@ class Choice extends StatelessWidget {
                                           child: ElevatedButton(
                                                 style: ElevatedButton.styleFrom(
                                                       backgroundColor: Colors.deepOrange,
+                                                      shape: RoundedRectangleBorder(
+                                                            borderRadius: BorderRadius.circular(75), // Adjust the radius as needed
+                                                      ),
                                                 ),
                                                 onPressed: () {
                                                       // Handle educator choice
