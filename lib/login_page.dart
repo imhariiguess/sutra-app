@@ -2,6 +2,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:sutra/register.dart';
 import 'package:sutra/alt_login.dart';
+import 'package:sutra/home_page.dart';
 
 void main() {
   runApp(const LoginApp());
@@ -76,6 +77,9 @@ class NewWidget extends StatelessWidget {
                   ElevatedButton(
                     onPressed: () {
                       // Add your login logic here
+                      Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => MyApp()),
+                      );
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.deepOrange,
