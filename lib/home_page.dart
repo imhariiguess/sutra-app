@@ -21,6 +21,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.brown[100],
       appBar: AppBar(
         title: Text('Home Page'),
       ),
@@ -41,11 +42,11 @@ class HomePage extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(height: 10),
-            const Text(
-              'time remaining: 4s',
-              style: TextStyle(fontSize: 16),
-            ),
+            //SizedBox(height: 10),
+            //const Text(
+              //'time remaining: 4s',
+              //style: TextStyle(fontSize: 16),
+            //),
           ],
         ),
       ),
