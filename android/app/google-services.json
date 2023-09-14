@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "33316125417",
+    "project_id": "sutra-83465",
+    "storage_bucket": "sutra-83465.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:33316125417:android:c804b2e68c50515d4a0e78",
+        "android_client_info": {
+          "package_name": "com.teamsutra.sutra"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCM6wuUJgaZKO6dLcSTxJ9OcGTPGynu5Zc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
