@@ -35,7 +35,7 @@ class NewWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.deepOrange[100],
+      backgroundColor: Colors.brown[100],
       body: Stack(
         children: <Widget>[
           Center(
@@ -90,6 +90,24 @@ class NewWidget extends StatelessWidget {
                       ),
                     ),
                   ),
+                  const SizedBox(height: 20),
+                  RichText(
+                      text: TextSpan(
+                        text: 'See other login options',
+                        style: const TextStyle(
+                          fontSize: 16.0,
+                          decoration: TextDecoration.underline,
+                          color: Colors.black,
+                        ),
+                        recognizer: TapGestureRecognizer()
+                          ..onTap = () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => const AltLoginPage()),
+                          );
+                          }
+                      ),
+                  ),
                 ],
               ),
             ),
@@ -126,7 +144,6 @@ class NewWidget extends StatelessWidget {
               ),
             ),
           ),
-
         ],
       ),
     );

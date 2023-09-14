@@ -6,7 +6,7 @@ class Choice extends StatelessWidget {
       @override
       Widget build(BuildContext context) {
             return Scaffold(
-                  backgroundColor: Colors.deepOrange[100],
+                  backgroundColor: Colors.brown[100],
                   appBar:
                       AppBar(
                             backgroundColor: Colors.transparent,

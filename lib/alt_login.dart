@@ -9,7 +9,7 @@ class AltLoginPage extends StatelessWidget {
         backgroundColor: Colors.transparent,
         elevation: 0.0,
       ),
-      backgroundColor: Colors.deepOrange[100],
+      backgroundColor: Colors.brown[100],
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
