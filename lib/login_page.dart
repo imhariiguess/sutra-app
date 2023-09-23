@@ -39,7 +39,7 @@ class NewWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey.shade200,
+      backgroundColor: Colors.brown[100],
       body: Stack(
         children: <Widget>[
           Center(

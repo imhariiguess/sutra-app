@@ -16,11 +16,11 @@ class UserProfilePage extends StatelessWidget {
             ),
             SizedBox(height: 20.0),
             Text(
-              'Ben Dover', // Replace with user's name
+              'Ben Foster', // Replace with user's name
               style: TextStyle(fontSize: 20.0),
             ),
             Text(
-              '@bendover42069', // Replace with user's username
+              '@benfoster', // Replace with user's username
               style: TextStyle(fontSize: 16.0, color: Colors.grey),
             ),
             SizedBox(height: 20.0),
@@ -71,15 +71,15 @@ class UserProfilePage extends StatelessWidget {
               },
               child: ListTile(
                 title: Text('Email'),
-                subtitle: Text('bendover4269@gmail.com'), // Replace with user's email
+                subtitle: Text('benfoster@gmail.com'), // Replace with user's email
               ),
             ),
             SizedBox(height: 20.0),
-            ElevatedButton(
-              onPressed: () {
-                // Add an action for the button (e.g., log out)
+            ListTile(
+              title: Text('App Settings'),
+              onTap: () {
+                // Add an action for the "App Settings" tile
               },
-              child: Text('Log Out'),
             ),
             SizedBox(height: 20.0), // Space at the bottom
           ],
