@@ -75,18 +75,11 @@ class UserProfilePage extends StatelessWidget {
               ),
             ),
             SizedBox(height: 20.0),
-            ElevatedButton(
-
-              onPressed: () {
-                // Add an action for the button (e.g., log out)
+            ListTile(
+              title: Text('App Settings'),
+              onTap: () {
+                // Add an action for the "App Settings" tile
               },
-              style: ElevatedButton.styleFrom(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(8.0), // Rounded corners
-                ),
-                primary: Colors.deepOrange, // Button color
-              ),
-              child: Text('Log Out'),
             ),
             SizedBox(height: 20.0), // Space at the bottom
           ],
