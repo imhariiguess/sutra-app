@@ -73,6 +73,8 @@ flutter:
     - assets/microsoft.png
     - assets/rsz_1rsz_google.png
     - assets/load-icon-png-8.png
+    - assets/sutra_appbar_big.png
+    - assets/sutra_appbar.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

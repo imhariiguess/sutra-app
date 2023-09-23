@@ -31,16 +31,13 @@ class _HomePageState extends State<HomePage> {
       return AppBar(
         backgroundColor: Colors.brown[100],
         automaticallyImplyLeading: false,
-        title: const Row(
-          children: [
-            Text(
-              'Sutra',
-              style: TextStyle(
-                color: Colors.deepOrange,
-                fontSize: 26,
-              ),
-            )
-          ],
+        leading: IconButton(
+          icon: Image.asset(
+              'assets/sutra_appbar.png',
+          ),
+          onPressed: () {
+
+          },
         ),
         actions: [
           IconButton(
@@ -98,8 +95,12 @@ class _HomePageState extends State<HomePage> {
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.search),
-            label: 'Search',
+            icon: Icon(Icons.trending_up),
+            label: 'Trending',
+          ),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.live_tv),
+            label: 'Live',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.chat_bubble),
