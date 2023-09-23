@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:sutra/alt_login.dart';
 import 'package:sutra/search_page.dart';
-import 'package:sutra/choice.dart';
+//import 'package:sutra/topic_page.dart';
+import 'package:sutra/profile_page.dart';
+import 'package:sutra/DMPage.dart';
+
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -71,11 +74,14 @@ class _HomePageState extends State<HomePage> {
       body: PageView(
         controller: _pageController,
         physics: const NeverScrollableScrollPhysics(),
-        children: const [
+        children: [
           // Define your pages here
           AltLoginPage(),
           SearchPage(),
-          Choice(),
+          //TopicHomePage(),
+          DMPage(),
+          UserProfilePage(),
+
         ],
         onPageChanged: (index) {
           setState(() {
