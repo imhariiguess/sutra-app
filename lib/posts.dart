@@ -33,6 +33,8 @@ class Posts extends StatelessWidget {
             imageUrl: 'assets/esp32.png',
             authorName: '@sharma_vinod',
             topicName: 'Electronics',
+            commentCount: 10,
+            upvoteCount: 15,
           ),
           RedditCard(
             title: 'Java hack no one tells you about :)',
@@ -44,6 +46,8 @@ class Posts extends StatelessWidget {
             imageUrl: 'assets/javaide.png',
             authorName: '@kasyap2023',
             topicName: 'Java',
+            commentCount: 26,
+            upvoteCount: 134,
           ),
           RedditCard(
             title: 'Interesting algorithm results',
@@ -54,7 +58,46 @@ class Posts extends StatelessWidget {
             onPressedShare: () {  },
             authorName: '@intelligibleCoder',
             topicName: 'C++',
-          ),// Add more RedditCards as needed
+            commentCount: 64,
+            upvoteCount: 198,
+          ),
+          RedditCard(
+            title: 'Confused by Hawking Radiation',
+            content: 'The article “Disappearing Act”, Scientific American, September 2023, discusses virtual particle pairs near...',
+            onPressedUpvote: (){},
+            onPressedDownvote: (){},
+            onPressedComment: () {},
+            onPressedShare: () {},
+            authorName: '@ReakBowtie',
+            topicName: 'Physics',
+            commentCount: 11,
+            upvoteCount: 20
+          ),
+          RedditCard(
+            title: 'Need guidance on using DynaMedEx search',
+            content: 'Institution got rid of UpToDate and now we have DynaMedEx. Usual complaints aside, my biggest issue is that...',
+            onPressedUpvote: (){},
+            onPressedDownvote: (){},
+            onPressedShare: (){},
+            onPressedComment: (){},
+            authorName: '@Sanjana_choudary',
+            topicName: 'Medicine',
+            commentCount: 3,
+            upvoteCount: 1,
+          ),
+          RedditCard(
+            title: 'Is this Friedel-Crafts alkylation viable?',
+            content: '',
+            imageUrl: 'assets/chem.png',
+            onPressedComment: (){},
+            onPressedShare: (){},
+            onPressedDownvote: () {},
+            onPressedUpvote: () {},
+            authorName: '@nobertorodrigo',
+            topicName: 'Chemistry',
+            commentCount: 0,
+            upvoteCount: 1,
+          )// Add more RedditCards as needed
         ],
       ),
     );
@@ -70,7 +113,9 @@ class RedditCard extends StatelessWidget {
   final VoidCallback? onPressedComment;
   final VoidCallback? onPressedShare;
   final String authorName;
-  final String topicName;// Callback for share button
+  final String topicName;
+  final int upvoteCount;
+  final int commentCount;// Callback for share button
 
   const RedditCard({
     required this.title,
@@ -82,8 +127,10 @@ class RedditCard extends StatelessWidget {
     required this.onPressedShare,
     required this.authorName,
     required this.topicName,
-    super.key,
-  });
+    required this.commentCount,
+    required this.upvoteCount,
+    Key? key,
+  }) : super(key: key);
 
 
   @override
@@ -131,6 +178,7 @@ class RedditCard extends StatelessWidget {
                       icon: const Icon(Icons.thumb_up),
                       onPressed: onPressedUpvote,
                     ),
+                    Text('$upvoteCount'),
                     IconButton(
                       icon: const Icon(Icons.thumb_down),
                       onPressed: onPressedDownvote,
@@ -140,6 +188,11 @@ class RedditCard extends StatelessWidget {
                 IconButton(
                   icon: const Icon(Icons.comment),
                   onPressed: onPressedComment,
+                ),
+                Padding
+                  (
+                  padding: const EdgeInsets.only(left: 2.0),
+                  child: Text('$commentCount'),
                 ),
                 IconButton(
                   icon: const Icon(Icons.share),
