@@ -76,7 +76,8 @@ flutter:
     - assets/profilepic.jpg
     - assets/embedded.png
     - assets/sutra_appbar.png
-    - assets/sutra_appbar_big.jpg
+    - assets/javaide.png
+    - assets/esp32.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sutra/alt_login.dart';
 import 'package:sutra/search_page.dart';
-//import 'package:sutra/topic_page.dart';
+import 'package:sutra/posts.dart';
 import 'package:sutra/profile_page.dart';
 import 'package:sutra/DMPage.dart';
 
@@ -76,7 +76,7 @@ class _HomePageState extends State<HomePage> {
         physics: const NeverScrollableScrollPhysics(),
         children: [
           // Define your pages here
-          AltLoginPage(),
+          Posts(),
           SearchPage(),
           //TopicHomePage(),
           DMPage(),
@@ -94,7 +94,7 @@ class _HomePageState extends State<HomePage> {
         onTap: _onTabTapped,
         unselectedItemColor: Colors.grey,
         selectedItemColor: Colors.deepOrange,
-        backgroundColor: Colors.brown[200],
+        backgroundColor: Colors.grey.shade200,
         items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
