@@ -21,16 +21,22 @@ class _SearchPageState extends State<SearchPage> {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: [
+      mainAxisAlignment: MainAxisAlignment.start,
+      children: <Widget> [
+        const SizedBox(height: 20.0,),
         Container(
+          width: 400.0,
+          height: 50.0,
           decoration: BoxDecoration(
             border: Border.all(
               color: Colors.grey, // Border color
               width: 1.0, // Border width
             ),
-            borderRadius: BorderRadius.circular(8.0), // Border radius
+            borderRadius: BorderRadius.circular(75.0), // Border radius
           ),
-          child: const TextField(
+          child: const Padding(
+          padding: EdgeInsets.symmetric(horizontal:8.0, vertical: 8.0),
+          child: TextField(
             decoration: InputDecoration(
               hintText: 'Search Sutra...', // Placeholder text
               contentPadding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 12.0), // Padding inside the box
@@ -39,25 +45,8 @@ class _SearchPageState extends State<SearchPage> {
             ),
           ),
         ),
-
-        TextField(
-          onChanged: updateSearchQuery,
-          decoration: const InputDecoration(
-            hintText: 'Search...',
-          ),
-        ),
-        Expanded(
-          child: ListView.builder(
-            itemCount: searchResults.length,
-            itemBuilder: (context, index) {
-              return ListTile(
-                title: Text(searchResults[index]),
-                // Handle item selection or navigation here
-              );
-            },
-          ),
-        ),
-      ],
+    ),
+    ],
     );
   }
 }

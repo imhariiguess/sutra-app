@@ -13,6 +13,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   final PageController _pageController = PageController();
   int _currentPageIndex = 0;
+
   void _onTabTapped(int index) {
     setState(() {
       _currentPageIndex = index;
@@ -24,15 +25,40 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
+  PreferredSizeWidget _buildAppBar() {
+    // Only show the AppBar on the home page (index 0)
+    if (_currentPageIndex == 0) {
+      return AppBar(
+        backgroundColor: Colors.brown[100],
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.search),
+            onPressed: (){
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const SearchPage()),
+              );
+            }
+          )
+        ],
+        // Add your AppBar content here
+      );
+    }
+    // Return an empty AppBar for other pages
+    return PreferredSize(
+      preferredSize: const Size.fromHeight(0), // Make it invisible
+      child: AppBar(
+        backgroundColor: Colors.transparent, // Make it transparent
+        elevation: 0, // Remove the shadow
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.brown[100],
-      appBar: AppBar(
-        title: const Text('Home Page'),
-        backgroundColor: Colors.brown[100],
-      ),
+      appBar: _buildAppBar(), // Use the custom AppBar method
       body: PageView(
         controller: _pageController,
         physics: const NeverScrollableScrollPhysics(),
@@ -68,5 +94,4 @@ class _HomePageState extends State<HomePage> {
       ),
     );
   }
-
 }
