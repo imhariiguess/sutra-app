@@ -1,55 +1,72 @@
 import 'package:flutter/material.dart';
+import 'package:sutra/alt_login.dart';
+import 'package:sutra/search_page.dart';
+import 'package:sutra/choice.dart';
 
-void main() {
-  runApp(MyApp());
+class HomePage extends StatefulWidget {
+  const HomePage({super.key});
+
+  @override
+  _HomePageState createState() => _HomePageState();
 }
 
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Sutra Home Page',
-      theme: ThemeData(
-        primarySwatch: Colors.deepOrange,
-      ),
-      home: HomePage(),
+class _HomePageState extends State<HomePage> {
+  final PageController _pageController = PageController();
+  int _currentPageIndex = 0;
+  void _onTabTapped(int index) {
+    setState(() {
+      _currentPageIndex = index;
+    });
+    _pageController.animateToPage(
+      index,
+      duration: const Duration(milliseconds: 300),
+      curve: Curves.ease,
     );
   }
-}
 
-class HomePage extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.brown[100],
       appBar: AppBar(
-        title: Text('Home Page'),
+        title: const Text('Home Page'),
+        backgroundColor: Colors.brown[100],
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Image.asset(
-              'assets/load-icon-png-8.png', // Replace with your image asset path
-              width: 120,
-              height: 120,
-            ),
-            SizedBox(height: 20),
-            const Text(
-              'Loading.. please wait!!',
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            //SizedBox(height: 10),
-            //const Text(
-              //'time remaining: 4s',
-              //style: TextStyle(fontSize: 16),
-            //),
-          ],
-        ),
+      body: PageView(
+        controller: _pageController,
+        physics: const NeverScrollableScrollPhysics(),
+        children: const [
+          // Define your pages here
+          AltLoginPage(),
+          SearchPage(),
+          Choice(),
+        ],
+        onPageChanged: (index) {
+          setState(() {
+            _currentPageIndex = index;
+          });
+        },
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: _currentPageIndex,
+        onTap: _onTabTapped,
+        items: const [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.search),
+            label: 'Search',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.settings),
+            label: 'Settings',
+          ),
+        ],
       ),
     );
   }
+
 }

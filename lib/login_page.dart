@@ -5,7 +5,10 @@ import 'package:sutra/alt_login.dart';
 import 'package:sutra/home_page.dart';
 
 void main() {
-  runApp(const LoginApp());
+  runApp(const MaterialApp(
+    title: 'Sutra',
+    home: LoginApp(),
+  ));
 }
 
 class LoginApp extends StatelessWidget {
@@ -78,7 +81,7 @@ class NewWidget extends StatelessWidget {
                     onPressed: () {
                       // Add your login logic here
                       Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => MyApp()),
+                        MaterialPageRoute(builder: (context) => const HomePage()),
                       );
                     },
                     style: ElevatedButton.styleFrom(
@@ -141,6 +144,7 @@ class NewWidget extends StatelessWidget {
                       style: TextStyle(
                         decoration: TextDecoration.underline,
                         fontWeight: FontWeight.bold,
+                        color: Colors.blueAccent,
                       ),
                     ),
                   ],
