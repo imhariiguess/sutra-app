@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:sutra/alt_login.dart';
 import 'package:sutra/search_page.dart';
-import 'package:sutra/posts.dart';
+import 'package:sutra/topic_page.dart';
 import 'package:sutra/profile_page.dart';
 import 'package:sutra/DMPage.dart';
+import 'package:sutra/Trending_page.dart';
+import 'package:sutra/LivePage.dart';
 
 
 class HomePage extends StatefulWidget {
@@ -76,8 +78,10 @@ class _HomePageState extends State<HomePage> {
         physics: const NeverScrollableScrollPhysics(),
         children: [
           // Define your pages here
-          Posts(),
-          SearchPage(),
+          AltLoginPage(),
+          TrendingPage(),
+          LivePage(),
+          //SearchPage(),
           //TopicHomePage(),
           DMPage(),
           UserProfilePage(),
@@ -94,7 +98,7 @@ class _HomePageState extends State<HomePage> {
         onTap: _onTabTapped,
         unselectedItemColor: Colors.grey,
         selectedItemColor: Colors.deepOrange,
-        backgroundColor: Colors.grey.shade200,
+        backgroundColor: Colors.brown[200],
         items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
