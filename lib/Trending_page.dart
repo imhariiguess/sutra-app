@@ -33,7 +33,7 @@ class TrendingPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Trending'),
+        title: const Text('Trending'),
         backgroundColor: Colors.deepOrange,
       ),
       body: Container(
@@ -44,7 +44,7 @@ class TrendingPage extends StatelessWidget {
             final article = articles[index];
             return Card(
               elevation: 2,
-              margin: EdgeInsets.all(8),
+              margin: const EdgeInsets.all(8),
               child: InkWell(
                 onTap: () {
                   // Navigate to the WebView to display the article
@@ -65,7 +65,7 @@ class TrendingPage extends StatelessWidget {
                       padding: const EdgeInsets.all(8.0),
                       child: Text(
                         article.title,
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
                         ),
@@ -75,7 +75,7 @@ class TrendingPage extends StatelessWidget {
                       padding: const EdgeInsets.all(8.0),
                       child: Text(
                         article.description,
-                        style: TextStyle(fontSize: 16),
+                        style: const TextStyle(fontSize: 16),
                       ),
                     ),
                   ],
@@ -115,9 +115,11 @@ class ArticleWebViewPage extends StatelessWidget {
         title: Text('Article'),
         backgroundColor: Colors.deepOrange,
       ),
-      body: WebView(
-        initialUrl: articleUrl,
-      ),
+      //body: WebView(
+       // initialUrl: articleUrl,
+      //),
     );
   }
 }
+
+

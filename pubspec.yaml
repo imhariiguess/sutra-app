@@ -29,6 +29,7 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   flutter_native_splash: ^2.3.2
+  webview_flutter: ^4.2.4
   flutter:
     sdk: flutter
 
@@ -79,6 +80,16 @@ flutter:
     - assets/javaide.png
     - assets/esp32.png
     - assets/chem.png
+    - assets/array_multipliers.jpg
+    - assets/barrel shifter.jpg
+    - assets/demux.jpg
+    - assets/digital electronics.jpg
+    - assets/downsampling.jpg
+    - assets/foxconn.jpg
+    - assets/jimbu.jfif
+    - assets/thalaivi.jpg
+    - assets/usedgadgets.avif
+    - assets/workshop-desk.webp
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

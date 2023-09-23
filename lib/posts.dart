@@ -30,7 +30,7 @@ class Posts extends StatelessWidget {
             onPressedDownvote: () {  },
             onPressedComment: () {  },
             onPressedShare: () {  },
-            imageUrl: 'assets/esp32.png',
+            postimageUrl: 'assets/esp32.png',
             authorName: '@sharma_vinod',
             topicName: 'Electronics',
             commentCount: 10,
@@ -43,7 +43,7 @@ class Posts extends StatelessWidget {
             onPressedDownvote: () {  },
             onPressedComment: () {  },
             onPressedShare: () {  },
-            imageUrl: 'assets/javaide.png',
+            postimageUrl: 'assets/javaide.png',
             authorName: '@kasyap2023',
             topicName: 'Java',
             commentCount: 26,
@@ -88,7 +88,7 @@ class Posts extends StatelessWidget {
           RedditCard(
             title: 'Is this Friedel-Crafts alkylation viable?',
             content: '',
-            imageUrl: 'assets/chem.png',
+            postimageUrl: 'assets/chem.png',
             onPressedComment: (){},
             onPressedShare: (){},
             onPressedDownvote: () {},
@@ -107,7 +107,7 @@ class Posts extends StatelessWidget {
 class RedditCard extends StatelessWidget {
   final String title;
   final String content;
-  final String? imageUrl;
+  final String? postimageUrl;
   final VoidCallback? onPressedUpvote;
   final VoidCallback? onPressedDownvote;
   final VoidCallback? onPressedComment;
@@ -120,7 +120,7 @@ class RedditCard extends StatelessWidget {
   const RedditCard({
     required this.title,
     required this.content,
-    this.imageUrl,
+    this.postimageUrl,
     required this.onPressedUpvote,
     required this.onPressedDownvote,
     required this.onPressedComment,
@@ -164,9 +164,9 @@ class RedditCard extends StatelessWidget {
               padding: const EdgeInsets.all(16.0),
               child: Text(content),
             ),
-            if (imageUrl != null)
+            if (postimageUrl != null)
               Image.asset(
-                imageUrl!,
+                postimageUrl!,
                 fit: BoxFit.cover,
               ),
             Row(

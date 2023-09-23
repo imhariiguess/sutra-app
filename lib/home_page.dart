@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:sutra/alt_login.dart';
 import 'package:sutra/search_page.dart';
-import 'package:sutra/topic_page.dart';
+import 'package:sutra/posts.dart';
 import 'package:sutra/profile_page.dart';
 import 'package:sutra/DMPage.dart';
 import 'package:sutra/Trending_page.dart';
@@ -78,7 +77,7 @@ class _HomePageState extends State<HomePage> {
         physics: const NeverScrollableScrollPhysics(),
         children: [
           // Define your pages here
-          AltLoginPage(),
+          Posts(),
           TrendingPage(),
           LivePage(),
           //SearchPage(),
