@@ -30,6 +30,18 @@ class _HomePageState extends State<HomePage> {
     if (_currentPageIndex == 0) {
       return AppBar(
         backgroundColor: Colors.brown[100],
+        automaticallyImplyLeading: false,
+        title: const Row(
+          children: [
+            Text(
+              'Sutra',
+              style: TextStyle(
+                color: Colors.deepOrange,
+                fontSize: 26,
+              ),
+            )
+          ],
+        ),
         actions: [
           IconButton(
             icon: const Icon(Icons.search),
@@ -39,7 +51,7 @@ class _HomePageState extends State<HomePage> {
                   MaterialPageRoute(builder: (context) => const SearchPage()),
               );
             }
-          )
+          ),
         ],
         // Add your AppBar content here
       );
