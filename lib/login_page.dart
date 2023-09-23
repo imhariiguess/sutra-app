@@ -40,7 +40,8 @@ class NewWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.brown[100],
-      body: Stack(
+      body: SingleChildScrollView(
+      child: Column(
         children: <Widget>[
           Center(
             child: Padding(
@@ -54,7 +55,7 @@ class NewWidget extends StatelessWidget {
                     width: 148,
                   ),
                   const SizedBox(
-                    height: 70.0,
+                    height: 50.0,
                   ),
                   const Text(
                     'Log in to your account',
@@ -154,6 +155,7 @@ class NewWidget extends StatelessWidget {
           ),
         ],
       ),
+    ),
     );
   }
 }

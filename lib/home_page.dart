@@ -77,12 +77,12 @@ class _HomePageState extends State<HomePage> {
         physics: const NeverScrollableScrollPhysics(),
         children: [
           // Define your pages here
-          Posts(),
+          const Posts(),
           TrendingPage(),
           LivePage(),
           //SearchPage(),
           //TopicHomePage(),
-          DMPage(),
+          const DMPage(),
           UserProfilePage(),
 
         ],

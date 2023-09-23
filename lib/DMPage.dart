@@ -1,18 +1,20 @@
 import 'package:flutter/material.dart';
 
 class DMPage extends StatelessWidget {
+  const DMPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Direct Messages'),
+        title: const Text('Direct Messages'),
         backgroundColor: Colors.deepOrange, // Set the AppBar to be transparent
         elevation: 0, // Remove the shadow
         automaticallyImplyLeading: false, // Remove the back button
       ),
       backgroundColor: Colors.grey.shade200,
       body: ListView(
-        children: [
+        children: const [
           ChatWidget(
             userName: 'Kasyap',
             message: 'Can you help me with field theory?',
@@ -24,7 +26,7 @@ class DMPage extends StatelessWidget {
           ),
           ChatWidget(
             userName: 'Murty',
-            message: 'Rumbo nandri!',
+            message: 'Change the lower limits and try',
           ),
         ],
       ),
@@ -33,7 +35,7 @@ class DMPage extends StatelessWidget {
           // Add an action for the floating button (e.g., create a new chat)
         },
         backgroundColor: Colors.deepOrange, // Set the button color
-        child: Icon(Icons.add), // Add a plus icon
+        child: const Icon(Icons.add), // Add a plus icon
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.endFloat, // Position the button
     );
@@ -45,7 +47,7 @@ class ChatWidget extends StatelessWidget {
   final String message;
   final bool isUnread;
 
-  ChatWidget({
+  const ChatWidget({super.key,
     required this.userName,
     required this.message,
     this.isUnread = false, // Default to false
@@ -54,13 +56,13 @@ class ChatWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      contentPadding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 12.0), // Adjust padding
+      contentPadding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 12.0), // Adjust padding
       leading: CircleAvatar(
         backgroundColor: Colors.deepOrange, // Set the background color to deepOrange
         radius: 30.0, // Increase the size of the icon
         child: Text(
           userName[0],
-          style: TextStyle(
+          style: const TextStyle(
             color: Colors.white, // Text color in the circle
             fontWeight: FontWeight.bold,
             fontSize: 24.0, // Increase the font size
@@ -76,7 +78,7 @@ class ChatWidget extends StatelessWidget {
       ),
       subtitle: Text(
         message,
-        style: TextStyle(
+        style: const TextStyle(
           fontSize: 18.0, // Increase the font size of the message
         ),
       ),
@@ -88,7 +90,7 @@ class ChatWidget extends StatelessWidget {
 }
 
 void main() {
-  runApp(MaterialApp(
+  runApp(const MaterialApp(
     home: DMPage(),
   ));
 }

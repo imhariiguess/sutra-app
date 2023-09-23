@@ -106,13 +106,13 @@ class Article {
 class ArticleWebViewPage extends StatelessWidget {
   final String articleUrl;
 
-  ArticleWebViewPage(this.articleUrl);
+  const ArticleWebViewPage(this.articleUrl, {super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Article'),
+        title: const Text('Article'),
         backgroundColor: Colors.deepOrange,
       ),
       //body: WebView(
