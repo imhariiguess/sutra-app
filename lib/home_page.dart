@@ -77,6 +77,9 @@ class _HomePageState extends State<HomePage> {
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentPageIndex,
         onTap: _onTabTapped,
+        unselectedItemColor: Colors.grey,
+        selectedItemColor: Colors.deepOrange,
+        backgroundColor: Colors.brown[200],
         items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
@@ -87,9 +90,10 @@ class _HomePageState extends State<HomePage> {
             label: 'Search',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.settings),
-            label: 'Settings',
+            icon: Icon(Icons.chat_bubble),
+            label: 'DM',
           ),
+          BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
         ],
       ),
     );
