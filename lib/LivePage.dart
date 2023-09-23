@@ -9,7 +9,7 @@ class LivePage extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Align(
+              const Align(
                 alignment: Alignment.center,
                 child: Text(
                   'Oops! None are live :(',
@@ -19,8 +19,8 @@ class LivePage extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 8),
-              Align(
+              const SizedBox(height: 8),
+              const Align(
                 alignment: Alignment.centerLeft,
                 child: Text(
                   'Recent Highlights',
@@ -30,7 +30,7 @@ class LivePage extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
               HighlightCard(
                 thumbnailAsset: 'assets/array_multipliers.jpg',
                 title: 'Learn Array Multipliers in 10 minutes',
@@ -40,7 +40,7 @@ class LivePage extends StatelessWidget {
                   // Add your navigation or other actions here
                 },
               ),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
               HighlightCard(
                 thumbnailAsset: 'assets/barrel shifter.jpg',
                 title: 'How do barrel shifters work?',
@@ -50,7 +50,7 @@ class LivePage extends StatelessWidget {
                   // Add your navigation or other actions here
                 },
               ),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
               HighlightCard(
                 thumbnailAsset: 'assets/demux.jpg',
                 title: 'What are Multiplexers?',
@@ -60,7 +60,7 @@ class LivePage extends StatelessWidget {
                   // Add your navigation or other actions here
                 },
               ),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
               HighlightCard(
                 thumbnailAsset: 'assets/digital electronics.jpg',
                 title: 'Introduction to Digital ELectronics',
@@ -70,7 +70,7 @@ class LivePage extends StatelessWidget {
                   // Add your navigation or other actions here
                 },
               ),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
               HighlightCard(
                 thumbnailAsset: 'assets/downsampling.jpg',
                 title: 'How to Solve Down Sampling Problems?',
@@ -121,14 +121,14 @@ class HighlightCard extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(width: 16),
+            const SizedBox(width: 16),
             Flexible(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
                     title,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 18,
                     ),
@@ -136,7 +136,7 @@ class HighlightCard extends StatelessWidget {
                   ),
                   Text(
                     'by $username',
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 16,
                       color: Colors.grey,
                     ),

@@ -33,11 +33,11 @@ class _HomePageState extends State<HomePage> {
     // Only show the AppBar on the home page (index 0)
     if (_currentPageIndex == 0) {
       return AppBar(
-        backgroundColor: Colors.brown[100],
+        backgroundColor: Colors.deepOrange,
         automaticallyImplyLeading: false,
         leading: IconButton(
           icon: Image.asset(
-              'assets/sutra_appbar.png',
+              'assets/sutra_appbar_black.png',
           ),
           onPressed: () {
 
