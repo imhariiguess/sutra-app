@@ -4,6 +4,12 @@ class LivePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('Live'),
+        backgroundColor: Colors.deepOrange, // Set the AppBar to be transparent
+        elevation: 0, // Remove the shadow
+        automaticallyImplyLeading: false, // Remove the back button
+      ),
       body: Center(
         child: SingleChildScrollView(
           child: Column(

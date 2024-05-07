@@ -1,4 +1,4 @@
-import 'package:flutter/gestures.dart';
+/*import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:sutra/register.dart';
 import 'package:sutra/alt_login.dart';
@@ -157,3 +157,4 @@ class NewWidget extends StatelessWidget {
     );
   }
 }
+*/

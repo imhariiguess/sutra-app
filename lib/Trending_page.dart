@@ -114,6 +114,7 @@ class ArticleWebViewPage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Article'),
         backgroundColor: Colors.deepOrange,
+        automaticallyImplyLeading: false, // Disable the back button
       ),
       //body: WebView(
        // initialUrl: articleUrl,
