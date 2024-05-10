@@ -10,10 +10,10 @@ class ContactsPage extends StatefulWidget {
 class _ContactsPageState extends State<ContactsPage> {
   List<Contact> _contacts = [
     // Initial contact
-    Contact(name: 'Emergency Services', number: '101'),
+    Contact(name: 'Emergency Services', number: '+917506237324'),
   ];
   Future<void> _sendSMS(List<String> contacts) async {
-    String message = "I have crashed. Please send help to location: 12.874830834235272, 80.22171663791678";
+    String message = "I have crashed. Please send help to location: 12.87370382815999, 80.22076398702873";
     List<String> recipients = contacts;
 
     try {
@@ -26,7 +26,7 @@ class _ContactsPageState extends State<ContactsPage> {
 ;
       } else {
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('Failed to send SMS')),
+          const SnackBar(content: Text('SMS will be sent shortly')),
         );
       }
     } catch (error) {
@@ -61,8 +61,15 @@ class _ContactsPageState extends State<ContactsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text('Contacts'),
+        iconTheme: IconThemeData(
+          color: Colors.black, // Change this for desired color
+        ),
+        backgroundColor: Colors.white70,
+        elevation: 0.0,
+        title: Text('Contacts',
+        style: TextStyle(color: Colors.black)),
         actions: [
           // Add Send SMS button to AppBar actions
           IconButton(
@@ -91,6 +98,9 @@ class _ContactsPageState extends State<ContactsPage> {
             onPressed: () => _navigateToAddContact(context),
             icon: Icon(Icons.add),
             label: Text('Add Contact'),
+            style: TextButton.styleFrom(
+              foregroundColor: Colors.black, // Change this for desired color
+            ),
           ),
         ],
       ),

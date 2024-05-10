@@ -175,11 +175,9 @@ class _MyHomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBar(
-        title: Text('Smart Helmet'),
-      ),
       body: Column(
         children: [
+          SizedBox(height: 75.0),
           // Row 1 - Connection Status
           GestureDetector(
             onTap: toggleConnection,
@@ -192,7 +190,7 @@ class _MyHomePageState extends State<HomePage> {
                   width: 250,
                 ),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.center, // Reduce spacing
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     isConnected
                         ? Icon(
